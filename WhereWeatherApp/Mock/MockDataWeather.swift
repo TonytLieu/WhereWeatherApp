@@ -7,52 +7,55 @@
 
 import Foundation
 
-class MockParams {
+class MockResponse {
     static let data = """
-       {
-         "coord": {
-           "lon": -74.006,
-           "lat": 40.7143
-         },
-         "weather": [
            {
-             "id": 800,
-             "main": "Clear",
-             "description": "clear sky",
-             "icon": "01d"
+             "coord": {
+               "lon": -84.388,
+               "lat": 33.749
+             },
+             "weather": [
+               {
+                 "id": 804,
+                 "main": "Clouds",
+                 "description": "overcast clouds",
+                 "icon": "04d"
+               }
+             ],
+             "base": "stations",
+             "main": {
+               "temp": 23.28,
+               "feels_like": 23.6,
+               "temp_min": 22.03,
+               "temp_max": 24.58,
+               "pressure": 1014,
+               "humidity": 74,
+               "sea_level": 1014,
+               "grnd_level": 981
+             },
+             "visibility": 10000,
+             "wind": {
+               "speed": 0.45,
+               "deg": 263,
+               "gust": 1.79
+             },
+             "clouds": {
+               "all": 99
+             },
+             "dt": 1726674888,
+             "sys": {
+               "type": 2,
+               "id": 2006620,
+               "country": "US",
+               "sunrise": 1726658597,
+               "sunset": 1726702793
+             },
+             "timezone": -14400,
+             "id": 4180439,
+             "name": "Atlanta",
+             "cod": 200
            }
-         ],
-         "base": "stations",
-         "main": {
-           "temp": 27.9,
-           "feels_like": 27.64,
-           "temp_min": 22.75,
-           "temp_max": 33.04,
-           "pressure": 1019,
-           "humidity": 41
-         },
-         "visibility": 10000,
-         "wind": {
-           "speed": 3.09,
-           "deg": 40
-         },
-         "clouds": {
-           "all": 0
-         },
-         "dt": 1685641325,
-         "sys": {
-           "type": 1,
-           "id": 4610,
-           "country": "US",
-           "sunrise": 1685611643,
-           "sunset": 1685665237
-         },
-         "timezone": -14400,
-         "id": 5128581,
-         "name": "New York",
-         "cod": 200
-       }
-""".data(using: .utf8)!
+    """.data(using: .utf8)!
 }
 
 class MockLocationMap: LocationMapService {
